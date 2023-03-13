@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Sign Up | Auction Site</title>
+	<link rel="stylesheet" href="style.css">
+	<script>
+		function validateForm() {
+			// Get form values
+			var userID = document.getElementById("userID").value;
+			var password = document.getElementById("password").value;
+			var name = document.getElementById("name").value;
+			var address = document.getElementById("address").value;
+			var country = document.getElementById("country").value;
+			var zipcode = document.getElementById("zipcode").value;
+			var email = document.getElementById("email").value;
+			var sex = document.querySelector('input[name="sex"]:checked');
+			var about = document.getElementById("about").value;
+
+			// Validate form values
+			if (userID == "") {
+				alert("Please enter a User ID.");
+				return false;
+			}
+			if (password == "") {
+				alert("Please enter a password.");
+				return false;
+			}
+			if (name == "") {
+				alert("Please enter your name.");
+				return false;
+			}
+			if (address == "") {
+				alert("Please enter your address.");
+				return false;
+			}
+			if (country == "") {
+				alert("Please select a country.");
+				return false;
+			}
+			if (zipcode == "") {
+				alert("Please enter your zipcode.");
+				return false;
+			}
+			if (email == "") {
+				alert("Please enter your email address.");
+				return false;
+			}
+			if (!sex) {
+				alert("Please select your sex.");
+				return false;
+			}
+			if (about == "") {
+				alert("Please tell us something about yourself.");
+				return false;
+			}
+		}
+	</script>
+</head>
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li><a href="index.htm">Home</a></li>
+				<li><a href="auctions.htm">Auctions</a></li>
+				<li><a href="contact.htm">Contact Us</a></li>
+				<li><a href="signIn.htm">Sign In</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<h2>Sign Up</h2>
+		<form onsubmit="return validateForm()">
+			<label for="userID">User ID</label>
+			<input type="text" id="userID">
+			<label for="password">Password</label>
+			<input type="password" id="password">
+			<label for="name">Name</label>
+			<input type="text" id="name">
+			<label for="address">Address</label>
+			<input type="text" id="address">
+			<label for="country">Country</label>
+			<select id="country">
+				<option value="">Select a country</option>
+				<option value="USA">USA</option>
+				<option value="Canada">Canada</option>
+				<option value="UK">UK</option>
+			</select>
+			<label for="zipcode">Zipcode</label>
+			<input type="text" id="zipcode">
+			<label for="email">Email</label>
+			<input type="email" id="email">
+			<label>Sex</label>
+			<label><input type="radio" name="sex" value="male">Male</label>
+			<label><input type="radio" name="sex" value="female">Female</label>
+            <label>About</label>
+            <label><textarea name="textarea" rows="5" cols="40">Write something here</textarea></label>

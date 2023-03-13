@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Auction Website</title>
+	<!-- External CSS -->
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<!-- Header -->
+	<header>
+		<h1>My Auction Website</h1>
+		<nav>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Auctions</a></li>
+				<li><a href="#">My Account</a></li>
+			</ul>
+		</nav>
+	</header>
+	
+	<!-- Main Content -->
+	<main>
+		<h2>Featured Auctions</h2>
+		<table>
+			<tr>
+				<td><img src="item1.jpg" alt="Item 1"></td>
+				<td>
+					<h3>Item 1</h3>
+					<p>Description of item 1 goes here.</p>
+					<p>Current Bid: $50</p>
+					<form action="#" method="post">
+						<label for="bid">Enter Your Bid:</label>
+						<input type="number" id="bid" name="bid" required>
+						<input type="submit" value="Place Bid">
+					</form>
+				</td>
+			</tr>
+			<tr>
+				<td><img src="item2.jpg" alt="Item 2"></td>
+				<td>
+					<h3>Item 2</h3>
+					<p>Description of item 2 goes here.</p>
+					<p>Current Bid: $100</p>
+					<form action="#" method="post">
+						<label for="bid">Enter Your Bid:</label>
+						<input type="number" id="bid" name="bid" required>
+						<input type="submit" value="Place Bid">
+					</form>
+				</td>
+			</tr>
+		</table>
+	</main>
+	
+	<!-- Footer -->
+	<footer>
+		<p>&copy; My Auction Website</p>
+	</footer>
+	
+	<!-- Internal CSS -->
+	<style>
+		h1 {
+			color: #333;
+			font-size: 2em;
+			text-align: center;
+		}
+		h2 {
+			color: #333;
+			font-size: 1.5em;
+		}
+		table {
+			border-collapse: collapse;
+			margin: 20px auto;
+			width: 80%;
+		}
+		td {
+			border: 1px solid #ccc;
+			padding: 10px;
+		}
+		img {
+			max-width: 200px;
+			height: auto;
+		}
+		form label {
+			display: block;
+			margin-bottom: 10px;
+		}
+		input[type="number"] {
+			width: 100px;
+			padding: 5px;
+			border: 1px solid #ccc;
+		}
+		input[type="submit"] {
+			padding: 5px 20px;
+			background-color: #333;
+			color: #fff;
+			border: none;
+			cursor: pointer;
+		}
+	</style>
+</body>
+</html>
